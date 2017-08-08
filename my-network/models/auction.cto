@@ -1,0 +1,48 @@
+/**
+ * Defines a data model for a blind vehicle auction
+ */
+
+ namespace org.acme.energy
+
+ asset Energy identified by ID {
+   o String ID
+     --> Neighbor owner
+ }
+
+ enum ListingState {
+   o AVAILABLE
+   o RESERVE_NOT_MET
+   o IN_USE
+ }
+
+ asset EnergyListing identified by energyListingId {
+   o String energyListingId
+   o Double price
+   o ListingState state
+   o Offer[] offers optional
+   --> Energy energy
+ }
+
+
+abstract participant User identified by email {
+  o String email
+  o String name
+}
+
+participant Neighbor extends User {
+  o Double balance
+}
+
+participant Community extends User {
+
+}
+
+transaction Offer {
+  o Double bidPrice
+  --> EnergyListing listing
+  --> Neighbor neighbor
+}
+
+transaction CloseBidding {
+  --> EnergyListing listing
+}
