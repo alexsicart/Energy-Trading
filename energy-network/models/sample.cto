@@ -4,7 +4,7 @@
 
  namespace org.acme.energy
 
- asset Energy identified by ID {
+ asset Next identified by ID {
    o String ID
      --> Neighbor owner
  }
@@ -20,7 +20,7 @@
    o Double price
    o ListingState state
    o Offer[] offers optional
-   --> Energy energy
+   --> Next energy
  }
 
 

@@ -21,7 +21,7 @@ rule EnergyOwner {
     description: "Allow the owner of a vehicle total access"
     participant(m): "org.acme.energy.Neighbor"
     operation: ALL
-    resource(v): "org.acme.energy.Energy"
+    resource(v): "org.acme.energy.Next"
     condition: (v.owner.getIdentifier() == m.getIdentifier())
     action: ALLOW
 }
