@@ -15,7 +15,7 @@
    o IN_USE
  }
 
- asset EnergyListing identified by energyListingId {
+ asset Provision identified by energyListingId {
    o String energyListingId
    o Double price
    o ListingState state
@@ -39,10 +39,10 @@ participant Community extends User {
 
 transaction Offer {
   o Double bidPrice
-  --> EnergyListing listing
+  --> Provision listing
   --> Neighbor neighbor
 }
 
 transaction CloseBidding {
-  --> EnergyListing listing
+  --> Provision listing
 }

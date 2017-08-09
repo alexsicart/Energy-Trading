@@ -58,7 +58,7 @@
       }
     })
     .then(function() {
-      return getAssetRegistry('org.acme.energy.EnergyListing');
+      return getAssetRegistry('org.acme.energy.Provision');
     })
     .then(function(energyListingRegistry) {
       return energyListingRegistry.update(listing);
@@ -90,7 +90,7 @@ function makeOffer(offer) {
     listing.offers = [];
   }
   listing.offers.push(offer);
-  return getAssetRegistry('org.acme.energy.EnergyListing')
+  return getAssetRegistry('org.acme.energy.Provision')
     .then(function(energyListingRegistry) {
       return energyListingRegistry.update(listing);
     });

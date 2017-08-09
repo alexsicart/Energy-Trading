@@ -26,11 +26,11 @@ rule EnergyOwner {
     action: ALLOW
 }
 
-rule EnergyListingOwner {
+rule ProvisionOwner {
     description: "Allow the owner of a vehicle total access to their vehicle listing"
     participant(m): "org.acme.energy.Neighbor"
     operation: ALL
-    resource(v): "org.acme.energy.EnergyListing"
+    resource(v): "org.acme.energy.Provision"
     condition: (v.energy.owner.getIdentifier() == m.getIdentifier())
     action: ALLOW
 }
