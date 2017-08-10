@@ -33,11 +33,9 @@ function closeBidding(closeBidding) {
     listing.offers.sort(function(a, b) {
       return(b.bidPrice - a.bidPrice);
     });
-    if (highestOffer[0] === highestOffer[1]) {
-      highestOffer = listing.offers[0, 1];
-    } else {
+
       highestOffer = listing.offers[0];
-    }
+
     if (highestOffer.bidPrice >= listing.price) {
       listing.state = 'IN_USE';
       buyer = highestOffer.neighbor;
@@ -54,7 +52,7 @@ function closeBidding(closeBidding) {
   }
 
   return getAssetRegistry('org.acme.energy.Next')
-  .then(function(Registry) {
+  .then(function(energyRegistry) {
     if (highestOffer) {
       return energyRegistry.update(listing.energy);
     } else {
