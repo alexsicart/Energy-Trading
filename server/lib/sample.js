@@ -56,12 +56,6 @@ function closeBidding(closeBidding) {
   });
 }
 
-/**
-* Make an Offer for a VehicleListing
-* @param {org.acme.energy.Offer} offer - the offer
-* @transaction
-*/
-
 function makeOffer(offer) {
   var listing = offer.listing;
   if (listing.state !== 'AVAILABLE') {

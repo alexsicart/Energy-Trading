@@ -4,7 +4,7 @@
   },
   "name": "energy-network",
   "version": "0.0.1",
-  "description": "My very first Hyperledger Composer Network",
+  "description": "",
   "scripts": {
       "prepublish": "mkdirp ./dist && composer archive create --sourceType dir --sourceName . -a ./dist/energy-network.bna",
       "pretest": "npm run lint",
