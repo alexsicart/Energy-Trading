@@ -1,4 +1,23 @@
 # Energy-trading
+## Blockchain
+
+> Blockchain is a linked list data structure where the links are hash pointers.
+
+------
+
+![Captura de pantalla 2017-09-17 a las 12.35.11](/screenshots/blockchain1.png)
+
+------
+
+![Captura de pantalla 2017-09-17 a las 12.36.59](/screenshots/blockchain2.png)
+
+Centralised - Facebook, WhatsApp. Everything relies on one server.
+
+Decentralized - Visa. Central structures,and small structures interconnected to the central structure.
+
+Distributed - Bitcoin. Each node has the same power in the network.
+
+------
 
 ## Description
 Energy trading system for neighbor communities, build on Hyperledger Blockchain.
